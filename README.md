@@ -1,60 +1,91 @@
 # WaffleLHost Installer
 
-WaffleLHost is a local Windows hosting manager for running bots and small apps directly from your own computer.
+WaffleLHost is a local Windows hosting manager for bots, apps, and Minecraft servers.
 
-It is designed for local project control, process logs, runtime configuration, environment variables, ports, and basic hardware/resource visibility in one clean desktop panel.
+It runs on your own computer and keeps projects, logs, settings, files, and server data local. The panel is made for managing local services with a clean dashboard, live logs, resource information, file management, and safe project imports.
 
-## What It Does
+## Features
 
-- Import ZIP projects safely.
-- Manage Node.js, Python, Java, and custom-command projects.
-- Start, stop, restart, and force-kill local services.
-- View live stdout/stderr logs.
+- Local dashboard for managing hosted projects.
+- Import ZIP projects and Minecraft server ZIPs.
+- Manage Node.js, Python, Java, custom-command apps, and Minecraft servers.
+- Start, stop, restart, and force-kill local processes.
+- View live stdout and stderr logs.
 - Configure environment variables per project.
-- Monitor local CPU, memory, disk, and hardware information when available.
-- Keep project data stored locally on your computer.
+- Edit setup commands and start commands.
+- Monitor CPU, memory, disk, and hardware details when available.
+- Store project data locally on the machine.
+- Use a local login session to protect the panel.
 
-## Installation
+## Minecraft Servers
 
-Run the WaffleLHost installer and follow the setup wizard.
+WaffleLHost includes a dedicated Minecraft Servers section for creating, importing, and managing local servers.
 
-The installer may request administrator permission because WaffleLHost is installed as a Windows desktop application. Project files, logs, and user data are stored separately in the user profile so the app can work normally after installation.
+Supported server options include:
+
+- Vanilla
+- Paper
+- Fabric
+- Manual server JAR mode for other loaders
+
+Minecraft **26.2** is supported as an experimental version. Use backups before testing experimental versions or loaders, especially with existing worlds.
+
+The Minecraft server panel includes:
+
+- Server creation
+- Existing server ZIP import
+- Server properties management
+- Console commands
+- Live logs
+- File manager
+- Upload, download, edit, copy, move, rename, and delete file actions
+
+## File Manager
+
+The file manager lets you work with server files from the local panel.
+
+You can open folders, edit text-based configuration files, upload plugins or mods, download files, create folders, rename items, copy items, move items, and delete selected files or folders.
+
+Binary and large files are not opened in the text editor to avoid freezing the panel.
 
 ## First Launch
 
-After opening WaffleLHost:
+On first launch, WaffleLHost asks you to create a local profile with a case-sensitive username and password.
 
-1. Import a trusted ZIP project.
-2. Review the detected project type and start command.
-3. Configure environment variables if needed.
-4. Start the project manually from the dashboard.
-
-WaffleLHost does not automatically run uploaded projects.
+After login, the app keeps a local session on the same machine/browser so the dashboard does not ask for login every time. A different browser, user profile, or computer must log in again.
 
 ## Privacy
 
 WaffleLHost is local-first.
 
-- No cloud account.
-- No telemetry.
-- No external dashboard.
-- No analytics.
-- No project upload to remote servers.
-- No hidden data sharing.
+- No cloud account
+- No telemetry
+- No analytics
+- No remote dashboard
+- No hidden data sharing
+- No automatic project upload
 
 Hosted projects may still access the internet if their own code requires it.
 
-## Safety Notice
+## Safety
 
-Only run projects you trust. Imported projects can execute code on your computer when started.
+Only run projects and server files you trust.
 
-Review commands, environment variables, and project files before running anything important.
+Imported projects can execute code on your computer when started. Review commands, environment variables, server files, plugins, and mods before running them.
+
+WaffleLHost does not automatically start imported projects.
+
+## Installation
+
+Run the WaffleLHost installer and follow the setup wizard.
+
+The installer may request administrator permission because WaffleLHost is installed as a Windows desktop application. Project files, logs, settings, and local data are stored separately in the user profile.
 
 ## Uninstall
 
 Use Windows Settings or Control Panel to uninstall WaffleLHost.
 
-Removing the application does not necessarily remove your saved projects and logs. Review your local WaffleLHost data folder if you want to delete stored project data manually.
+Uninstalling the application may not remove saved projects, logs, and local data. Review your WaffleLHost data folder if you want to remove stored project files manually.
 
 ## Developer
 
